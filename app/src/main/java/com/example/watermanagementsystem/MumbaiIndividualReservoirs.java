@@ -1,5 +1,6 @@
 package com.example.watermanagementsystem;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -20,65 +21,46 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MumbaiIndividualReservoirs extends AppCompatActivity {
 
-    private Button ReservoirAButton;
-    private DatabaseReference Ref;
-    private String waterLevelData;
+    private Button ReservoirAButton, ReservoirBButton, ReservoirCButton;
     private Toolbar mToolbar;
-    private TextView showData, waterlevelText, lowWaterWarning;
-    private ProgressBar loadingBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mumbai_individual_reservoirs);
 
-        InitializeFields();
+       InitializeFields();
 
-        Ref.child("WaterLevel").addValueEventListener(new ValueEventListener() {
+       ReservoirAButton.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent = new Intent(MumbaiIndividualReservoirs.this, Reservoirs.class);
+               intent.putExtra("reservoirName", "a");
+               startActivity(intent);
+           }
+       });
+
+        ReservoirBButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                waterLevelData = dataSnapshot.child("ReservoirA").getValue().toString();
-                showData.setText(waterLevelData);
-                loadingBar.setVisibility(View.INVISIBLE);
-
-                if(Integer.parseInt(waterLevelData) < 100)
-                {
-                    blink();
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(MumbaiIndividualReservoirs.this, "Errorr", Toast.LENGTH_LONG).show();
-
+            public void onClick(View v) {
+                Intent intent = new Intent(MumbaiIndividualReservoirs.this, Reservoirs.class);
+                intent.putExtra("reservoirName", "b");
+                startActivity(intent);
             }
         });
 
-
-    }
-
-    private void blink()
-    {
-        final Handler handler = new Handler();
-        new Thread(new Runnable() {
+        ReservoirCButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                int timeToBlink = 500;    //in milissegunds
-                try{Thread.sleep(timeToBlink);}catch (Exception e) {}
-                handler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        if(lowWaterWarning.getVisibility() == View.VISIBLE){
-                            lowWaterWarning.setVisibility(View.INVISIBLE);
-                        }else{
-                            lowWaterWarning.setVisibility(View.VISIBLE);
-                        }
-                        blink();
-                    }
-                });
+            public void onClick(View v) {
+                Intent intent = new Intent(MumbaiIndividualReservoirs.this, Reservoirs.class);
+                intent.putExtra("reservoirName", "c");
+                startActivity(intent);
             }
-        }).start();
+        });
+
     }
+
+
 
     private void InitializeFields() {
 
@@ -89,14 +71,10 @@ public class MumbaiIndividualReservoirs extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-//        ReservoirAButton = (Button) findViewById(R.id.reservoir_a);
-        Ref = FirebaseDatabase.getInstance().getReference();
+        ReservoirAButton = (Button) findViewById(R.id.reservoir_a);
+        ReservoirBButton = (Button) findViewById(R.id.reservoir_b);
+        ReservoirCButton = (Button) findViewById(R.id.reservoir_c);
 
-        showData = (TextView) findViewById(R.id.show_data);
-        waterlevelText = (TextView)findViewById(R.id.waterlevel_text);
-        lowWaterWarning = (TextView)findViewById(R.id.blink_warning);
-
-        loadingBar = (ProgressBar)findViewById(R.id.load_water_level);
 
     }
 
