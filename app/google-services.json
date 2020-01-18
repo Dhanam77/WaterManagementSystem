@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "603013927865",
+    "firebase_url": "https://smartwatermanagement-a2331.firebaseio.com",
+    "project_id": "smartwatermanagement-a2331",
+    "storage_bucket": "smartwatermanagement-a2331.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603013927865:android:53cf6d8097be3dfc5fdc68",
+        "android_client_info": {
+          "package_name": "com.example.watermanagementsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603013927865-fipp560cgfv2e8ad8bb8d4mv1n82lr72.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.watermanagementsystem",
+            "certificate_hash": "26a3901b1a0b4cf0fcbdad976f59e782e3f09856"
+          }
+        },
+        {
+          "client_id": "603013927865-g8soupaj7dssdspg5l3cgiphag49h9gf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO26unNzmMmS6T9VHQ1RbB8u-dPBkmsXA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603013927865-g8soupaj7dssdspg5l3cgiphag49h9gf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
