@@ -11,12 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Reservoirs"></activity>
-        <activity android:name=".ConnectedReservoirs" />
+        <activity android:name=".Reservoirs"
+            android:parentActivityName=".MumbaiIndividualReservoirs"></activity>
+        <activity android:name=".ConnectedReservoirs"
+            android:parentActivityName=".ConnectedRegions"/>
         <activity
             android:name=".MumbaiIndividualReservoirs"
             android:parentActivityName=".IndividualRegions" />
-        <activity android:name=".ConnectedRegions" />
+        <activity android:name=".ConnectedRegions"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".IndividualRegions"
             android:parentActivityName=".MainActivity" />

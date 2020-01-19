@@ -67,7 +67,7 @@ public class MumbaiIndividualReservoirs extends AppCompatActivity {
         //Setting the toolbar
         mToolbar = (Toolbar) findViewById(R.id.main_toolbar);
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Reservoir A");
+        getSupportActionBar().setTitle("Rajasthan Reservoirs");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 

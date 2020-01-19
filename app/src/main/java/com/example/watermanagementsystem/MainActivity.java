@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
         connectedReservoirButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Coming Soon!", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, ConnectedRegions.class);
+                startActivity(intent);
             }
         });
 

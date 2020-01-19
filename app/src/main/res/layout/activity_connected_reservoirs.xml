@@ -5,9 +5,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ConnectedReservoirs">
+
+
     <include
         android:id="@+id/main_toolbar"
         layout="@layout/app_bar_layout"/>
+
+    <Button
+        android:id="@+id/connected_reservoir_a"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/buttons"
+        android:layout_centerHorizontal="true"
+        android:text="Sei"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/connected_reservoir_b"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="110dp"
+        android:layout_below="@id/connected_reservoir_a"
+
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/buttons"
+        android:text="Jawai"
+        android:textSize="20dp"/>
+
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/connected_reservoir_a"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="-20dp"
+        android:layout_toLeftOf="@id/connected_reservoir_a"
+        android:background="@drawable/shape" />
+
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/connected_reservoir_a"
+        android:layout_marginLeft="-14dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="-20dp"
+        android:layout_toRightOf="@id/connected_reservoir_a"
+        android:background="@drawable/opp_shape" />
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/connected_reservoir_a"
+        android:layout_marginTop="110dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/hori_shape"
+        />
+
+    <Button
+        android:id="@+id/connected_reservoir_c"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="110dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/connected_reservoir_a"
+        android:background="@drawable/buttons"
+        android:text="Mansi-Wakal"
+        android:textSize="20dp"/>
 
 
 </RelativeLayout>

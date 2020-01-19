@@ -12,7 +12,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:background="@drawable/buttons"
-        android:text="Reservoir A"
+        android:text="Sei"
         android:textSize="20dp" />
 
 
@@ -25,7 +25,7 @@
         android:layout_marginTop="40dp"
         android:layout_below="@id/reservoir_a"
         android:background="@drawable/buttons"
-        android:text="Reservoir B"
+        android:text="Jawai"
         android:textSize="20dp" />
 
 
@@ -38,7 +38,7 @@
         android:layout_marginTop="40dp"
         android:layout_below="@id/reservoir_b"
         android:background="@drawable/buttons"
-        android:text="Reservoir C"
+        android:text="Mansi-Wakal"
         android:textSize="20dp" />
 
 

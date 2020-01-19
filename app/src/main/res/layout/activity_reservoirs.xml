@@ -10,50 +10,205 @@
         android:id="@+id/main_toolbar"
         layout="@layout/app_bar_layout" />
 
+
     <ProgressBar
         android:id="@+id/load_water_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_below="@id/vertical_line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_toolbar"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="31dp"
+        android:text="Name:"
+        android:textColor="@android:color/black"
+        android:textSize="18dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/name"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/black" />
+
+
+    <TextView
+        android:id="@+id/show_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_toolbar"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="31dp"
+        android:layout_marginRight="30dp"
+        android:text="---"
+        android:textColor="@android:color/black"
+        android:textSize="18dp" />
+
+
+    <TextView
+        android:id="@+id/capacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="31dp"
+        android:text="Capacity:"
+        android:textColor="@android:color/black"
+        android:textSize="18dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/capacity"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/show_capacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginRight="30dp"
+
+        android:text="---"
+        android:textColor="@android:color/black"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/demand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/show_capacity"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="31dp"
+        android:text="Demand:"
+        android:textColor="@android:color/black"
+        android:textSize="18dp" />
+
+
+    <TextView
+        android:id="@+id/show_demand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/capacity"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginRight="30dp"
+        android:text="---"
+        android:textColor="@android:color/black"
+        android:textSize="18dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/demand"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/black" />
+
 
     <TextView
         android:id="@+id/waterlevel_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/reservoir_a"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="30dp"
+        android:layout_below="@id/demand"
+        android:layout_marginTop="31dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/vertical_line"
+        android:text="Water Level"
 
-        android:layout_marginTop="101dp"
-        android:text="Water Level:"
-        android:textColor="@android:color/black"
-        android:textSize="18dp" />
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20dp" />
+
+    <View
+        android:id="@+id/vertical_line"
+        android:layout_width="1dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/demand"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/black" />
+
 
     <TextView
         android:id="@+id/show_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/reservoir_a"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@id/waterlevel_text"
+        android:layout_below="@id/demand"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="31dp"
+        android:layout_toRightOf="@id/vertical_line"
         android:text="---"
-        android:textSize="18dp"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/vertical_line"
+        android:background="@android:color/black" />
 
 
     <TextView
         android:id="@+id/blink_warning"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/show_data"
-        android:layout_marginTop="40dp"
+        android:layout_below="@id/vertical_line"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="20dp"
-        android:text="Warning: Water Level too low"
         android:visibility="gone"
-        android:textSize="22dp"
-        android:textColor="@android:color/holo_red_dark" />
+        android:layout_marginTop="40dp"
+        android:text="Warning: Water Level too low"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="22dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/blink_warning"
+        android:id="@+id/connected_data"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/required_water"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/extra_reservoir_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/required_water"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:padding="20dp"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/extra_reservoir_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/extra_reservoir_1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:padding="20dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
 
 
 </RelativeLayout>
